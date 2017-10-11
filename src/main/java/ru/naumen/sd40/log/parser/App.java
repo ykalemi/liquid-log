@@ -35,8 +35,8 @@ public class App
         InfluxDAO storage = null;
         if (influxDb != null)
         {
-            storage = new InfluxDAO(System.getProperty("influx.host"), System.getProperty("influx.user"),
-                    System.getProperty("influx.password"));
+            storage = new InfluxDAO(System.getProperty("INFLUXDB_HOST"), System.getProperty("INFLUXDB_USER"),
+                    System.getProperty("INFLUXDB_PASSWORD"));
             storage.init();
             storage.connectToDB(influxDb);
         }
